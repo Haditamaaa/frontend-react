@@ -100,12 +100,14 @@ export default function UsersIndex() {
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td className="text-center">
-                          <Link to={`/admin/users/edit/${user.id}`} className="btn btn-sm btn-primary rounded-sm shadow border-0 me-2">
-                            EDIT
-                          </Link>
-                          <button onClick={() => deleteUser(user.id)} className="btn btn-sm btn-danger rounded-sm shadow border-0">
-                            DELETE
-                          </button>
+                          <div className="d-flex justify-content-center gap-2">
+                            <Link to={`/admin/users/edit/${user.id}`} className="btn btn-sm btn-primary rounded-sm shadow border-0">
+                              EDIT
+                            </Link>
+                            <button onClick={() => deleteUser(user.id)} className="btn btn-sm btn-danger rounded-sm shadow border-0">
+                              DELETE
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     ))
